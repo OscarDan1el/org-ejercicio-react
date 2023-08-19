@@ -1,9 +1,14 @@
+import { useState } from "react";
 import "./Formulario.css";
 import CampoTexto from "../CampoTexto";
 import ListaOpciones from "../ListaOpciones";
 import Boton from "../Boton";
 
 const Formulario = () => {
+
+    const [nombre,actualizarNombre] = useState("");
+    const [puesto,actualizarPuesto] = useState("");
+    const [foto,actualizarFoto] = useState(""); 
 
     const manejarEnvio = (evento) =>{
         evento.preventDefault()
