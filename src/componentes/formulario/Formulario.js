@@ -13,14 +13,40 @@ const Formulario = () => {
     const manejarEnvio = (evento) =>{
         evento.preventDefault()
         console.log("Manejar el envio", evento);
+        let datosEnviar = {
+            nombre,
+            puesto,
+            foto
+
+        }
+        console.log(datosEnviar); 
     }
 
     return <section className="formulario">
         <form onSubmit={manejarEnvio}>
             <h2>Rellena el formulario para crear el colaborador</h2>
-            <CampoTexto titulo="Nombre" placeholder="Ingresa Nombre" required={true}/>
-            <CampoTexto titulo="Puesto" placeholder="Ingresa Puesto" required/>
-            <CampoTexto titulo="Foto" placeholder="Ingresar enlace de Foto" required/>
+
+            <CampoTexto 
+            titulo="Nombre" 
+            placeholder="Ingresa Nombre" 
+            required 
+            valor={nombre} 
+            actualizarValor={actualizarNombre}
+            />
+            <CampoTexto 
+            titulo="Puesto" 
+            placeholder="Ingresa Puesto" 
+            required
+            valor={puesto} 
+            actualizarValor={actualizarPuesto}
+            />
+            <CampoTexto 
+            titulo="Foto" 
+            placeholder="Ingresar enlace de Foto" 
+            required
+            valor={foto} 
+            actualizarValor={actualizarFoto}
+            />
             <ListaOpciones />
             <Boton texto="Crear"/>
         </form>
