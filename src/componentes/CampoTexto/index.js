@@ -4,7 +4,7 @@ import "./CampoTexto.css"
 const CampoTexto = (props) => {
 
     /* cambie el nombre de la variable de actaulizar valor a set valor  */
-    const [valor,setValor] = useState("Harlan"); 
+    const [valor,setValor] = useState(""); 
 
     const placeholderModificado =`${props.placeholder}...`;
 
