@@ -14,17 +14,61 @@ function App() {
     actualizarMostar(!mostrarFormulario)
   }
 
+  const equipos = [
+    {titulo : "Programacion",
+    colorPrimario : "#57C278",
+    colorSecundario : "D9F7E9"
+    }
+    ,
+    {titulo : "Frontend",
+    colorPrimario : "#82CFFA",
+    colorSecundario : "#E8F8FF"
+    }
+    ,
+    {titulo : "Data Science",
+    colorPrimario : "#A6D157",
+    colorSecundario : "#F0F8E2"
+    }
+    ,
+    {titulo : "Devops",
+    colorPrimario : "#E06B69",
+    colorSecundario : "#FDE7E8"
+    }
+    ,
+    {titulo : "UX y Diseño",
+    colorPrimario : "#DB6EBF",
+    colorSecundario : "#FAE9F5"
+    }
+    ,
+    {titulo : "Movil",
+    colorPrimario : "#FFBA05",
+    colorSecundario : "#FFF5D9"
+    }
+    ,
+    {titulo : "Innovacion y Gestion",
+    colorPrimario : "#FF8A29",
+    colorSecundario : "#FFEEDF"
+    }
+    ,
+    ]
+
   return (
     <div>
       {/* 2 maneras de llamar los componentes */}
        <Header></Header>
        {mostrarFormulario && <Formulario/>}
        <MiOrg cambiarMostrar={cambiarMostrar}/>
-       <Equipo equipo="Programacion"/>
-       <Equipo equipo="Front End"/>
-       <Equipo equipo="Data Science"/>
-       <Equipo equipo="Devops"/>
-       <Equipo equipo="Ux y Diseño"/>
+       
+       {/* 
+       1 nombre de la funcion 
+       2-un metodo y siempre en un arreglo se usa map (recibira datos y nos regresara 
+         un nuevo arreglo y recibira un arrow fuctions)
+       3-
+        */}
+      {
+        equipos.map((equipo) => <Equipo datos={equipo} key={equipo.titulo}/> )
+      } 
+
     </div> 
   );
 }
