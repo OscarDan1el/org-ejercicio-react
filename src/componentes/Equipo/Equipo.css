@@ -17,3 +17,11 @@
     /* separa el subrayado */
     padding-bottom: 8px;
 }
+
+.colaboradores{
+    display: flex;
+    /* pone los elmentos con espacio uno del lado del otroi */
+    justify-content: space-evenly;
+    /* rope la linea y los acomoda debajo para que no se amontonen */
+    flex-wrap: wrap;
+}
