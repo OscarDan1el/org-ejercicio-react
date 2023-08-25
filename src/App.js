@@ -17,7 +17,7 @@ function App() {
   const equipos = [
     {titulo : "Programacion",
     colorPrimario : "#57C278",
-    colorSecundario : "D9F7E9"
+    colorSecundario : "#D9F7E9"
     }
     ,
     {titulo : "Frontend",
@@ -56,7 +56,7 @@ function App() {
     <div>
       {/* 2 maneras de llamar los componentes */}
        <Header></Header>
-       {mostrarFormulario && <Formulario/>}
+       {mostrarFormulario && <Formulario equipos={equipos.map((equipo)=>equipo.titulo)}/>}
        <MiOrg cambiarMostrar={cambiarMostrar}/>
        
        {/* 
