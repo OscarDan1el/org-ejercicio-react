@@ -9,11 +9,21 @@ import Equipo from './componentes/Equipo';
 function App() { 
   /* con true o false puedo determinar e estado de muestra de mi formulario  */
   const [mostrarFormulario,actualizarMostar] = useState(false);
+  const [colaboradores,actualizarColaboradores] = useState ([]);
 
   const cambiarMostrar = () => {
     actualizarMostar(!mostrarFormulario)
   }
 
+  /* Registrar Colaborador  */
+  const registrarColaborador = (colaborador) => {
+    console.log("Nuevo colaborador", colaborador)
+    //Spread operator
+    actualizarColaboradores([...colaboradores, colaborador])
+  }
+
+
+  /* lista de equipos */
   const equipos = [
     {titulo : "Programacion",
     colorPrimario : "#57C278",
@@ -56,7 +66,11 @@ function App() {
     <div>
       {/* 2 maneras de llamar los componentes */}
        <Header></Header>
-       {mostrarFormulario && <Formulario equipos={equipos.map((equipo)=>equipo.titulo)}/>}
+       {mostrarFormulario && <Formulario 
+       equipos={equipos.map((equipo) => equipo.titulo)}
+       registrarColaborador={registrarColaborador}
+       />
+       }
        <MiOrg cambiarMostrar={cambiarMostrar}/>
        
        {/* 
@@ -66,7 +80,12 @@ function App() {
        3-
         */}
       {
-        equipos.map((equipo) => <Equipo datos={equipo} key={equipo.titulo}/> )
+        equipos.map((equipo) => <Equipo 
+        datos={equipo} 
+        key={equipo.titulo}
+        colaboradores={colaboradores}
+        />
+        )
       } 
 
     </div> 

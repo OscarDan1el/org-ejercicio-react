@@ -8,18 +8,21 @@ const Equipo = (props) => {
    /* obtengo los valores y creo las variables */
    /* y esto hace que ya no utilice tanto coddigo de props.--- */
    const {colorPrimario, colorSecundario, titulo} = props.datos 
-
+   const { colaboradores } = props
 
    const obj = {
       backgroundColor: colorSecundario
    }
-
+   console.log(colaboradores.length > 0)
+   
    const estiloTitulo = {borderColor:colorPrimario};
 
  return <section className="equipo" style={obj}>
     <h3 style = {estiloTitulo} >{titulo}</h3>
     <div className="colaboradores">
-        <Colaborador></Colaborador>
+        {/* {
+         colaboradores.map((colaborador) => <Colaborador></Colaborador>)
+        } */}
     </div>
  </section>
 }

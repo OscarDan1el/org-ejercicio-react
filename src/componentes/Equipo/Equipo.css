@@ -11,7 +11,7 @@
 .equipo h3{
     font-weight: 400;
     color: #212121;
-    border-bottom: 4px solid #57c278;
+    border-bottom: 4px solid;
     /* con esta propiedad solo ocupara el espacio necesario del border-bottom */
     display: inline-block;
     /* separa el subrayado */

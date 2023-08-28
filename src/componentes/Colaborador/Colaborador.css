@@ -4,27 +4,28 @@
 }
 
 .colaborador .encabezado{
-    background-color: #f0f0f0;
+    background-color: #f1f1f1;
     border-radius: 10px 10px 0px 0px;
 }
 
 .colaborador img{
     width: 100px;
-    border-radius: 50px;
+    border-radius: 50%;
     position: relative;
     bottom: -50px;
 }
 
 .colaborador .info{
-    background: #ffffff;
-    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.08);
+    background: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 40px;
+    padding-top: 90px;
+    padding-bottom: 40px;
     min-height: 100px;
-    font-family: "Monserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.colaborador.info h4{
+.colaborador .info h4{
     color: #6278F7;
     font-size: 18px;
     line-height: 22px;
@@ -39,4 +40,10 @@
     padding: 0 24px;
     font-weight: 400;
     margin: 0;
+}
+
+.eliminar{
+    position: absolute;
+    right: -15px;
+    top: -15px;
 }
