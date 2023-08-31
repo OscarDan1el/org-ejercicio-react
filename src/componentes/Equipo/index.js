@@ -17,7 +17,10 @@ const Equipo = (props) => {
    
    const estiloTitulo = {borderColor:colorPrimario};
 
- return <section className="equipo" style={obj}>
+   /* si colaboradores.length es mayor a cero entonces  */
+ return <>
+ { colaboradores.length > 0 &&
+ <section className="equipo" style={obj}>
     <h3 style = {estiloTitulo} >{titulo}</h3>
     <div className="colaboradores">
         {
@@ -26,6 +29,8 @@ const Equipo = (props) => {
         }
     </div>
  </section>
+      }
+</>
 }
 
 export default Equipo;
